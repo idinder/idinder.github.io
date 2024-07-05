@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology to My Loved One</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #fffbeb;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #ffa500;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ffd700;
+            border: none;
+            color: #333;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ffaa00;
+        }
+        #message {
+            font-size: 18px;
+            color: #ffa500;
+            margin-top: 20px;
+            display: none;
+        }
+        #apologyContent {
+            display: none;
+            margin-top: 20px;
+        }
+        #apologyContent img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #videoButton, #secondVideoButton {
+            margin-top: 20px;
+            display: none;
+        }
+        #videoContainer, #secondVideoContainer {
+            margin-top: 20px;
+            display: none;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To My Loved One</h1>
+        <button onclick="showApology()">Click Me</button>
+        <p id="message"></p>
+        <div id="apologyContent">
+            <p>I truly regret my actions and hope you can forgive me.</p>
+            <img src="content/getty_480169467_970647970450075_63537.jpg" alt="Apology Image 1">
+            <p>You mean the world to me, and I promise to do better.</p>
+            <img src="content/maafcikgu.png" alt="Apology Image 2">
+        </div>
+        <button id="videoButton" onclick="showVideo('videoContainer')">Watch Video</button>
+        <div id="videoContainer">
+            <video controls>
+                <source src="content/utkcikguzul.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button id="secondVideoButton" onclick="showVideo('secondVideoContainer')">Watch Another Video</button>
+        <div id="secondVideoContainer">
+            <video controls>
+                <source src="https://example.com/second-apology-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function showApology() {
+            const message = document.getElementById('message');
+            const apologyContent = document.getElementById('apologyContent');
+            const videoButton = document.getElementById('videoButton');
+            const secondVideoButton = document.getElementById('secondVideoButton');
+            message.textContent = "I'm sorry";
+            message.style.display = 'block';
+            apologyContent.style.display = 'block';
+            videoButton.style.display = 'inline-block';
+            secondVideoButton.style.display = 'inline-block';
+        }
+
+        function showVideo(containerId) {
+            const videoContainer = document.getElementById(containerId);
+            videoContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
